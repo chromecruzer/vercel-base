@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../api/index.js"],
+  "sourcesContent": ["const express = require(\"express\");\r\nconst app = express();\r\nconst path = require(\"path\")\r\n\r\n//app.get(\"/\", (req, res) => res.send(\"Express on Vercel\"));\r\n// Serve static files from the dist directory\r\nconst clientBuildPath = path.join(process.cwd(), 'dist');\r\napp.use(express.static(clientBuildPath));\r\n\r\n// Serve static files from the 'public' directory\r\napp.use('/assets', express.static(path.join(__dirname, 'dist/assets'), {\r\n  setHeaders: (res, path) => {\r\n    if (path.endsWith('.css')) {\r\n      res.setHeader('Content-Type', 'text/css');\r\n    }\r\n  }\r\n}));\r\n\r\n// Serve the index.html file for the /home route\r\napp.get('/', (req, res) => {\r\n  res.sendFile(path.join(clientBuildPath, 'index.html'));\r\n});\r\n\r\napp.listen(3000, () => console.log(\"Server ready on port 3000.\"));\r\n\r\nmodule.exports = app;"],
+  "mappings": "AAAA,IAAMA,EAAU,QAAQ,SAAS,EAC3BC,EAAMD,EAAQ,EACdE,EAAO,QAAQ,MAAM,EAIrBC,EAAkBD,EAAK,KAAK,QAAQ,IAAI,EAAG,MAAM,EACvDD,EAAI,IAAID,EAAQ,OAAOG,CAAe,CAAC,EAGvCF,EAAI,IAAI,UAAWD,EAAQ,OAAOE,EAAK,KAAK,UAAW,aAAa,EAAG,CACrE,WAAY,CAACE,EAAKF,IAAS,CACrBA,EAAK,SAAS,MAAM,GACtBE,EAAI,UAAU,eAAgB,UAAU,CAE5C,CACF,CAAC,CAAC,EAGFH,EAAI,IAAI,IAAK,CAACI,EAAKD,IAAQ,CACzBA,EAAI,SAASF,EAAK,KAAKC,EAAiB,YAAY,CAAC,CACvD,CAAC,EAEDF,EAAI,OAAO,IAAM,IAAM,QAAQ,IAAI,4BAA4B,CAAC,EAEhE,OAAO,QAAUA",
+  "names": ["express", "app", "path", "clientBuildPath", "res", "req"]
+}

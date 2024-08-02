@@ -1,0 +1,2 @@
+var t=require("express"),e=t(),i=require("path"),o=i.join(process.cwd(),"dist");e.use(t.static(o));e.use("/assets",t.static(i.join(__dirname,"dist/assets"),{setHeaders:(n,s)=>{s.endsWith(".css")&&n.setHeader("Content-Type","text/css")}}));e.get("/",(n,s)=>{s.sendFile(i.join(o,"index.html"))});e.listen(3e3,()=>console.log("Server ready on port 3000."));module.exports=e;
+//# sourceMappingURL=bundle.js.map

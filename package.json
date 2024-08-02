@@ -1,0 +1,22 @@
+{
+  "name": "vercel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon api/index.js",
+    "publish-vercel": "vercel",
+    "build": "npx esbuild build.cjs",
+    "start:offline": "serverless offline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.23.0",
+    "express": "^4.19.2",
+    "glob": "^11.0.0",
+    "serverless-http": "^3.2.0"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "D:\\vercel": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.19",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "aws": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "my-service",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs14.x",
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "functions": {
+              "app": {
+                "handler": "index.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/{proxy+}",
+                      "method": "any"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "configFileDirPath": "D:\\vercel",
+          "config": {
+            "type": "aws"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "isDefaultConfig": true
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "D:\\vercel",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "my-service",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs14.x",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "app": {
+          "handler": "index.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/{proxy+}",
+                "method": "any"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "service: my-service\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs14.x\r\n\r\nfunctions:\r\n  app:\r\n    handler: index.handler\r\n    events:\r\n      - http:\r\n          path: /{proxy+}\r\n          method: any\r\n\r\n",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "error": {
+      "message": "Serverless command \"offline\" not found. Run \"serverless help\" for a list of all available commands.",
+      "code": "UNRECOGNIZED_CLI_COMMAND"
+    },
+    "params": {},
+    "machineId": "4085bea674b2ddd6a15c7d045c28d81e",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "7e1b764d-fecb-47b9-ba74-cf27fb4c3fb2",
+    "orgName": "stellamary2019",
+    "userId": "S54ZyV9kF7kCsKFQVG",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "stellamary2019",
+    "subscription": null,
+    "userEmail": "shayammurali@gmail.com",
+    "versionSf": "4.1.19",
+    "serviceProviderAwsCfStackName": "my-service-dev",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
